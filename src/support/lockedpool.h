@@ -4,12 +4,7 @@
 
 #ifndef BITCOIN_SUPPORT_LOCKEDPOOL_H
 #define BITCOIN_SUPPORT_LOCKEDPOOL_H
-
-#include <cstddef>
-#include <list>
-#include <map>
-#include <memory>
-#include <mutex>
+>
 #include <unordered_map>
 
 /**
@@ -87,7 +82,7 @@ public:
      * This returns base <= ptr < (base+size) so only use it for (inclusive)
      * chunk starting addresses.
      */
-    bool addressInArena(void *ptr) const { return ptr >= base && ptr < end; }
+    bool addressInAren const { return ptr >= base && ptr < end; }
 private:
     typedef std::multimap<size_t, void*> SizeToChunkSortedMap;
     /** Map to enable O(log(n)) best-fit allocation, as it's sorted by size */

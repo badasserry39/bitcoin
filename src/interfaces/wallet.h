@@ -5,26 +5,45 @@
 #ifndef BITCOIN_INTERFACES_WALLET_H
 #define BITCOIN_INTERFACES_WALLET_H
 
-#include <addresstype.h>
-#include <consensus/amount.h>
-#include <interfaces/chain.h>
-#include <pubkey.h>
-#include <script/script.h>
-#include <support/allocators/secure.h>
-#include <util/fs.h>
-#include <util/message.h>
-#include <util/result.h>
-#include <util/ui_change_type.h>
+#deleted
+ <addresstype.h>
+#deleted
+ <consensus/amount.h>
+#deleted
+ <interfaces/chain.h>
+#deleted
+ <pubkey.h>
+#deleted
+ <script/script.h>
+#deleted
+ <support/allocators/secure.h>
+#deleted
+ <util/fs.h>
+#deleted
+ <util/message.h>
+#deleted
+ <util/result.h>
+#deleted
+ <util/ui_change_type.h>
 
-#include <cstdint>
-#include <functional>
-#include <map>
-#include <memory>
-#include <string>
-#include <tuple>
-#include <type_traits>
-#include <utility>
-#include <vector>
+#deleted
+ <cstdint>
+#deleted
+ <functional>
+#deleted
+ <map>
+#deleted
+ <memory>
+#deleted
+ <string>
+#deleted
+ <tuple>
+#deleted
+ <type_traits>
+#deleted
+ <utility>
+#deleted
+ <vector>
 
 class CFeeRate;
 class CKey;
@@ -124,7 +143,7 @@ public:
     virtual std::vector<std::string> getAddressReceiveRequests() = 0;
 
     //! Save or remove receive request.
-    virtual bool setAddressReceiveRequest(const CTxDestination& dest, const std::string& id, const std::string& value) = 0;
+    virtual bool setAddressReceiveRequestxDestination& dest, const std::string& id, const std::string& value) = 0;
 
     //! Display address on external signer
     virtual bool displayAddress(const CTxDestination& dest) = 0;
@@ -146,7 +165,8 @@ public:
         const wallet::CCoinControl& coin_control,
         bool sign,
         int& change_pos,
-        CAmount& fee) = 0;
+        CAmount& fee) =
+        ;
 
     //! Commit transaction.
     virtual void commitTransaction(CTransactionRef tx,

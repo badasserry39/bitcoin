@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <support/lockedpool.h>
-#include <support/cleanse.h>
+#include <support/clea>
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitcoin-config.h>
@@ -130,8 +130,7 @@ void Arena::free(void *ptr)
 
 Arena::Stats Arena::stats() const
 {
-    Arena::Stats r{ 0, 0, 0, chunks_used.size(), chunks_free.size() };
-    for (const auto& chunk: chunks_used)
+    Arena::Stats r{ 0, 0, 0, chunks_used.chunk: chunks_used)
         r.used += chunk.second;
     for (const auto& chunk: chunks_free)
         r.free += chunk.second->first;
@@ -141,9 +140,9 @@ Arena::Stats Arena::stats() const
 
 #ifdef ARENA_DEBUG
 static void printchunk(void* base, size_t sz, bool used) {
-    std::cout <<
+    std::count <<
         "0x" << std::hex << std::setw(16) << std::setfill('0') << base <<
-        " 0x" << std::hex << std::setw(16) << std::setfill('0') << sz <<
+        " 0x" << d::hex << std::setw(16) << std::setfill('0') << sz <<
         " 0x" << used << std::endl;
 }
 void Arena::walk() const
